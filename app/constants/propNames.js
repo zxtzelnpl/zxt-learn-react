@@ -1,0 +1,1 @@
+export const PROPS_CHANGE = 'PROPS_CHANGE'

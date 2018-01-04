@@ -1,0 +1,53 @@
+.Navbar{
+  display:flex;
+  position:relative;
+  padding:5px;
+  width:200px;
+  height:40px;
+  .choice{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:200px;
+    height:40px;
+    cursor:pointer;
+  }
+  .names{
+    position:absolute;
+    top:40px;
+
+    width:100%;
+    background:#eee;
+    ul{
+      display:flex;
+      flex-direction: column;
+    }
+    li{
+      display:flex;
+      align-items: center;
+
+      height:20px;
+      cursor:pointer;
+      span:first-child{
+        padding-right:10px;
+      }
+      span:last-child{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height:20px;
+        width:20px;
+        border-radius:5px;
+        overflow: hidden;
+        color:#fff;
+        font-weight:bold;
+        &.add{
+          background:green;
+        }
+        &.minus{
+          background:red;
+        }
+      }
+    }
+  }
+}

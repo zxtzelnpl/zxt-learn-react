@@ -1,0 +1,82 @@
+{
+  "name": "zxt-learn-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=dev && webpack-dev-server --progress --color",
+    "server": "nodemon ./server/index.js",
+    "build": "rd/s/q build && set NODE_ENV=production&& webpack --config ./webpack.production.config.js --progress --colors",
+    "pro": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "build",
+      "config"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__jest__/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy",
+      "^cpn(.*)$": "<rootDir>/src/components$1"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-better-serve": "^2.0.7",
+    "koa-body": "^2.5.0",
+    "koa-ejs": "^4.1.0",
+    "koa-favicon": "^2.0.0",
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.5.1",
+    "moment": "^2.19.2",
+    "mongoose": "^4.13.4",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
+    "json-loader": "^0.5.7",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "open-browser-webpack-plugin": "0.0.5",
+    "postcss-loader": "^2.0.8",
+    "raf": "^3.4.0",
+    "react-router-dom": "^4.2.2",
+    "react-transform-hmr": "^1.0.4",
+    "redux-logger": "^3.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
